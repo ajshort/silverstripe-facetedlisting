@@ -1,0 +1,11 @@
+#listing-items { width: 100%; border-collapse: collapse; }
+#listing-items thead { border-left: 1px solid #222; }
+#listing-items th { background: #222; color: #FFF; padding: 4px; }
+#listing-items th a { color: #FFF; }
+#listing-items tbody { border-right: 1px solid #CCC; }
+#listing-items td { padding: 4px; border-left: 1px solid #CCC; border-bottom: 1px solid #CCC; }
+
+#listing-pagination { background: #F4F4F4; border: 1px solid #CCC; padding: 5px; position: relative; margin-top: 5px; }
+#listing-items-num { left: 0; width: 100%; text-align: center; position: absolute; z-index: 1; }
+#listing-items-pagination-controls { position: relative; z-index: 2; }
+#listing-per-page { float: right; position: relative; z-index: 3; }
