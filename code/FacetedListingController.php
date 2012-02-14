@@ -128,10 +128,10 @@ abstract class FacetedListingController extends Page_Controller {
 	 */
 	public function getDefaultSort() {
 		$sort = Object::get_static($this->getItemClass(), 'default_sort');
-
-		if (preg_match('/"([a-zA-Z]+)" (ASC|DESC)/', $sort, $matches)) {
-			return array('sort' => $matches[1], 'dir' => $matches[0]);
-		} else {
+		if (preg_match('/"?([a-zA-Z]+)"? ([Aa][Ss][Cc]|[Dd][Ee][Ss][Cc])/', $sort, $matches)) {
+			return array('sort' => $matches[1], 'dir' => $matches[2]);
+		}
+		else {
 			return array('sort' => trim($sort, '"'), 'dir' => 'DESC');
 		}
 	}
